@@ -1,0 +1,30 @@
+% Generate two Pentagonal numbers with index n and m, P_n, and P_m.
+% n > m, and therefore P_n > P_m
+% 
+% P_p = P_n + P_m
+% P_q = P_n - P_m  (note: n>m, so P_q is positive)%
+%
+% Add these two equations to show that:
+% P_p + P_q = 2P_n
+%
+% Subtract them to show that:
+% P_p - P_q = 2P_m
+%
+% P_q < P_m < P_n < P_p
+%
+%
+% --Algorithm--
+% Iterate through m. Find a q, less than m.
+% P_m + P_q = P_n. If that's pentagonal, continue.
+% If P_m+P_n is pentagonal, then the answer is P_q.
+clear
+
+maxint = 100;
+startint = 2;
+diff = pentagon(maxint);
+
+for m = startint:maxint
+   for p = (startint)-1:(m-1)
+       P_n = pentagon(m) + pentagon(q);
+   end    
+end
